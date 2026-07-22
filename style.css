@@ -193,7 +193,7 @@ main.page{padding-block:clamp(28px,3vw,40px) var(--section-pad);
   display:flex;align-items:center;gap:16px}
 .ccard::before{content:"";position:absolute;top:14px;left:0;bottom:14px;width:3px;background:var(--gold2)}
 .ccard::after{content:"";position:absolute;top:14px;right:0;bottom:14px;width:3px;background:var(--gold2)}
-.ccard:hover{border-color:rgba(230,192,121,.4);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.ccard:hover,.godot:hover,.pillar:hover{border-color:rgba(230,192,121,.5);box-shadow:0 8px 24px rgba(0,0,0,.3)}
 .ccard .cicon{width:26px;height:26px;flex:none;color:var(--gold)}
 .ccard .ctxt h3{font-size:1rem;font-weight:800;margin-bottom:2px}
 .ccard .ctxt p{color:var(--dim);font-size:.85rem;margin-bottom:4px}
