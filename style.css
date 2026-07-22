@@ -38,7 +38,7 @@ h2{font-size:clamp(1.35rem,3.4vw,1.85rem);font-weight:800;letter-spacing:.01em;m
 .gold{color:var(--gold)}
 .g{color:var(--gold-brand)}
 .brandname{color:var(--ink);font-weight:700;font-family:var(--ff-display)}
-.divider{width:120px;height:2px;border:0;background:linear-gradient(90deg,transparent,var(--gold2),transparent);margin:28px auto}
+.divider{width:120px;height:2px;border:0;background:linear-gradient(90deg,transparent,var(--gold2),transparent);margin:40px auto}
 .nowrap{white-space:nowrap}
 .mt-lg{margin-top:36px}
 .mt-sm{margin-top:26px}
@@ -97,8 +97,8 @@ header .wrap{max-width:1440px}
 .team-line span{color:var(--gold)}
 
 /* built with godot */
-.godot{margin:var(--section-pad) auto 0;display:flex;width:fit-content;max-width:100%;align-items:center;gap:18px;
-  border:1px solid var(--line);background:rgba(17,26,43,.5);border-radius:6px;padding:22px 32px}
+.godot{margin:var(--section-pad) auto 0;display:inline-flex;flex-direction:column;align-items:center;gap:10px;
+  border:1px solid var(--line);background:rgba(17,26,43,.5);border-radius:14px;padding:24px 32px;text-align:center}
 .godot .gicon{width:46px;height:46px;flex:none}
 .godot .gicon path{fill:var(--godot)}
 .godot .gtxt{text-align:center}
