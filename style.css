@@ -57,7 +57,6 @@ header .wrap{max-width:1440px}
 .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
 .nav-toggle span{width:24px;height:2px;background:var(--ink);border-radius:2px}
 @media(max-width:620px){
-  .brand{display:none}
   .nav-toggle{display:flex}
   .navlinks{position:absolute;top:100%;left:0;right:0;flex-direction:row;justify-content:center;gap:0;
     background:rgba(11,17,30,.98);border-bottom:1px solid var(--line);padding:14px 0;display:none}
@@ -141,7 +140,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 14px;color:var(--dim);fon
 .foot-grid>.fbrand{justify-self:center}
 .foot-grid>.fcol:nth-child(3){justify-self:center}
 .foot-social{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin-top:14px}
-@media(max-width:640px){.foot-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"explore contact" "brand brand";gap:22px}
+@media(max-width:640px){.foot-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"explore contact" "brand brand";gap:22px;align-items:start}
   .foot-grid>.fcol:first-child{grid-area:explore}
   .foot-grid>.fbrand{grid-area:brand}
   .foot-grid>.fcol:nth-child(3){grid-area:contact}
