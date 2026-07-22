@@ -166,14 +166,15 @@ footer{border-top:1px solid var(--line);padding:22px 0 14px;color:var(--dim);fon
 .foot-social .sbox{display:grid;place-items:center;opacity:1;visibility:visible}
 .foot-social .sbox svg{width:22px;height:22px;display:block}
 .foot-social .sbox svg path{fill:#e6c079 !important}
-/* mobile: 44x44 icons = WCAG touch target. .fbrand's 34ch cap is lifted so five of them fit one
-   row; the cap moves to .fbrand p so the brand line keeps its measure. */
+/* mobile: 44x44 tap target holds a 30px glyph — the padding is the touch area, not the artwork.
+   .fbrand's 34ch cap is lifted so five targets fit one row; the cap moves to .fbrand p so the
+   brand line keeps its measure. Gap scales with viewport: 5x44 + 4xgap must clear 320px. */
 @media(max-width:640px){
   .fcol.fbrand{max-width:none}
   .fbrand p{max-width:34ch}
-  .foot-social{gap:clamp(6px,3vw,12px);flex-wrap:nowrap}
+  .foot-social{gap:clamp(8px,3.5vw,18px);flex-wrap:nowrap}
   .foot-social .sbox{width:44px;height:44px}
-  .foot-social .sbox svg{width:44px;height:44px}}
+  .foot-social .sbox svg{width:30px;height:30px}}
 
 /* subpages (about, contact) */
 main.page{padding-block:clamp(28px,3vw,40px) var(--section-pad);
