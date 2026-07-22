@@ -5,7 +5,7 @@
   --godot:#478cbf;
   --gold-brand:#f2cf7a;
   --max:1180px;
-  --section-pad:clamp(44px, 5.5vw, 76px);
+  --section-pad:clamp(32px, 4vw, 56px);
   --ff-display:'Cinzel',Georgia,'Times New Roman',serif;
 }
 @font-face{font-family:'Cinzel';font-style:normal;font-weight:400;font-display:swap;src:url(cinzel-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -38,9 +38,9 @@ h2{font-size:clamp(1.35rem,3.4vw,1.85rem);font-weight:800;letter-spacing:.01em;m
 .gold{color:var(--gold)}
 .g{color:var(--gold-brand)}
 .brandname{color:var(--ink);font-weight:700;font-family:var(--ff-display)}
-.divider{width:120px;height:2px;border:0;background:linear-gradient(90deg,transparent,var(--gold2),transparent);margin:40px auto}
+.divider{width:120px;height:2px;border:0;background:linear-gradient(90deg,transparent,var(--gold2),transparent);margin:28px auto}
 .nowrap{white-space:nowrap}
-.mt-lg{margin-top:56px}
+.mt-lg{margin-top:36px}
 .mt-sm{margin-top:26px}
 .contact .lead{margin-left:auto;margin-right:auto}
 
@@ -104,6 +104,7 @@ header .wrap{max-width:1440px}
 .godot .gtxt{text-align:left}
 .godot .gtxt b{display:block;font-weight:800;font-size:1.22rem}
 .godot .gtxt small{color:var(--dim);font-size:.96rem}
+.godot .gtxt .godot-tm{margin-top:8px;opacity:.55;font-size:.74rem}
 
 /* pillars */
 .pillars-sec{background:linear-gradient(180deg,transparent,rgba(20,31,54,.5),transparent)}
@@ -164,7 +165,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 14px;color:var(--dim);fon
 .ftrademark{width:100%;color:var(--dim);opacity:.65;font-size:.74rem;margin-top:6px;line-height:1.5}
 
 /* legal pages */
-.legal{max-width:84ch;margin:0 auto;padding:80px 24px 80px;text-align:justify;hyphens:auto}
+.legal{max-width:84ch;margin:0 auto;padding:56px 24px 48px;text-align:justify;hyphens:auto}
 .legal h1{font-size:2rem;font-weight:800;margin-bottom:6px}
 .legal .updated{color:var(--dim);font-size:.85rem;margin-bottom:32px}
 .legal h2{font-size:1.2rem;margin:32px 0 8px}
@@ -183,19 +184,19 @@ main.page{padding-block:clamp(72px,8vw,96px) var(--section-pad);
 .page-head h2{line-height:1.2}
 .page-head .lead{margin:12px auto 0}
 .prose{max-width:84ch;margin:28px auto 0;color:var(--dim);font-size:1.04rem;text-align:justify;hyphens:auto}
-.godot-tm{text-align:center;color:var(--dim);opacity:.55;font-size:.74rem;margin-top:12px}
 .prose p{margin-bottom:1.1rem}
 .prose strong{color:var(--ink);font-weight:700}
-.contact-cards{max-width:960px;margin:36px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.contact-cards{max-width:520px;margin:36px auto 0;display:flex;flex-direction:column;gap:14px}
 .ccard{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
-  border-radius:14px;padding:26px 22px;text-align:center;transition:.2s;position:relative;overflow:hidden}
-.ccard::before{content:"";position:absolute;top:0;left:16px;right:16px;height:3px;background:var(--gold2)}
-.ccard:hover{transform:translateY(-4px);border-color:rgba(230,192,121,.4);box-shadow:0 12px 30px rgba(0,0,0,.35)}
-.ccard .cicon{width:30px;height:30px;margin:0 auto 12px;color:var(--gold)}
-.ccard h3{font-size:1.08rem;font-weight:800;margin-bottom:6px}
-.ccard p{color:var(--dim);font-size:.9rem;margin-bottom:14px}
-.ccard a{color:var(--gold);font-weight:700;font-size:.92rem;word-break:break-word}
-.ccard a:hover{text-decoration:underline}
+  border-radius:14px;padding:22px 22px 22px 28px;text-align:left;transition:.2s;position:relative;overflow:hidden;
+  display:flex;align-items:center;gap:16px}
+.ccard::before{content:"";position:absolute;top:16px;left:0;bottom:16px;width:3px;background:var(--gold2)}
+.ccard:hover{border-color:rgba(230,192,121,.4);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.ccard .cicon{width:28px;height:28px;flex:none;color:var(--gold)}
+.ccard .ctxt h3{font-size:1.02rem;font-weight:800;margin-bottom:4px}
+.ccard .ctxt p{color:var(--dim);font-size:.88rem;margin-bottom:6px}
+.ccard .ctxt a{color:var(--gold);font-weight:700;font-size:.88rem;word-break:break-word}
+.ccard .ctxt a:hover{text-decoration:underline}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(20px);transition:.6s ease}
