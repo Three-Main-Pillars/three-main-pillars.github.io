@@ -24,7 +24,7 @@ main{flex:1 0 auto}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
 /* global image standard: crisp high-DPI rendering, aspect preserved */
-img{max-width:100%;height:auto;display:block;image-rendering:-webkit-optimize-contrast}
+img{max-width:100%;height:auto;display:block}
 svg{display:block}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 section{padding-block:var(--section-pad)}
@@ -40,8 +40,6 @@ h2{font-size:clamp(1.35rem,3.4vw,1.85rem);font-weight:800;letter-spacing:.01em;m
 .nowrap{white-space:nowrap}
 .mt-lg{margin-top:36px}
 .mt-sm{margin-top:26px}
-.contact .lead{margin-left:auto;margin-right:auto}
-
 /* header */
 header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
   background:rgba(11,17,30,.72);border-bottom:1px solid var(--line)}
@@ -116,14 +114,9 @@ header .wrap{max-width:1440px}
 .pillar p{color:var(--dim);font-size:.9rem}
 
 /* social */
-.social{margin-top:24px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.sbox{display:grid;place-items:center;cursor:default;position:relative;transition:.2s;color:var(--gold)}
-.sbox svg{width:22px;height:22px}
-.sbox svg path,.sbox svg circle,.sbox svg rect{fill:var(--gold)}
-.sbox-note{margin-top:12px;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);font-weight:700}
-
-/* contact */
-.contact{text-align:center}
+.social-link{display:grid;place-items:center;position:relative;transition:.2s;color:var(--gold)}
+.social-link svg{width:22px;height:22px}
+.social-link svg path,.social-link svg circle,.social-link svg rect{fill:var(--gold)}
 
 /* footer */
 footer{border-top:1px solid var(--line);padding:22px 0 14px;color:var(--dim);font-size:.85rem}
@@ -163,9 +156,10 @@ footer{border-top:1px solid var(--line);padding:22px 0 14px;color:var(--dim);fon
 .legal a{color:var(--gold)}
 .legal .back{display:inline-block;margin-bottom:24px;color:var(--gold);font-weight:700}
 
-.foot-social .sbox{display:grid;place-items:center;opacity:1;visibility:visible}
-.foot-social .sbox svg{width:22px;height:22px;display:block}
-.foot-social .sbox svg path{fill:#e6c079 !important}
+.foot-social .social-link{display:grid;place-items:center;opacity:1;visibility:visible;transition:transform .2s}
+.foot-social a.social-link:hover{transform:scale(1.18)}
+.foot-social a.social-link:focus-visible{transform:scale(1.18)}
+.foot-social .social-link svg{width:22px;height:22px;display:block}
 /* mobile: 44x44 tap target holds a 30px glyph — the padding is the touch area, not the artwork.
    .fbrand's 34ch cap is lifted so five targets fit one row; the cap moves to .fbrand p so the
    brand line keeps its measure. Gap scales with viewport: 5x44 + 4xgap must clear 320px. */
@@ -173,8 +167,8 @@ footer{border-top:1px solid var(--line);padding:22px 0 14px;color:var(--dim);fon
   .fcol.fbrand{max-width:none}
   .fbrand p{max-width:34ch}
   .foot-social{gap:clamp(8px,3.5vw,18px);flex-wrap:nowrap}
-  .foot-social .sbox{width:44px;height:44px}
-  .foot-social .sbox svg{width:30px;height:30px}}
+  .foot-social .social-link{width:44px;height:44px}
+  .foot-social .social-link svg{width:30px;height:30px}}
 
 /* subpages (about, contact) */
 main.page{padding-block:clamp(28px,3vw,40px) var(--section-pad);
