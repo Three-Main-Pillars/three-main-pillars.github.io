@@ -98,7 +98,7 @@ header .wrap{max-width:1440px}
 
 /* built with godot */
 .godot{margin:30px auto 0;display:flex;width:fit-content;max-width:100%;align-items:center;gap:18px;
-  border:1px solid var(--line);background:rgba(17,26,43,.5);border-radius:14px;padding:26px 38px}
+  border:1px solid var(--line);background:rgba(17,26,43,.5);border-radius:18px;padding:26px 38px}
 .godot .gicon{width:46px;height:46px;flex:none}
 .godot .gicon path{fill:var(--godot)}
 .godot .gtxt{text-align:left}
@@ -174,8 +174,9 @@ footer{border-top:1px solid var(--line);padding:22px 0 14px;color:var(--dim);fon
 .legal a{color:var(--gold)}
 .legal .back{display:inline-block;margin-bottom:24px;color:var(--gold);font-weight:700}
 
-.foot-social .soc{width:40px;height:40px}
-.foot-social .soc svg{width:19px;height:19px}
+.foot-social .soc{width:40px;height:40px;display:grid;place-items:center;opacity:1;visibility:visible}
+.foot-social .soc svg{width:19px;height:19px;display:block}
+.foot-social .soc svg path{fill:#e6c079 !important}
 
 /* subpages (about, contact) */
 main.page{padding-block:clamp(72px,8vw,96px) var(--section-pad);
@@ -188,9 +189,10 @@ main.page{padding-block:clamp(72px,8vw,96px) var(--section-pad);
 .prose strong{color:var(--ink);font-weight:700}
 .contact-cards{max-width:520px;margin:36px auto 0;display:flex;flex-direction:column;gap:14px}
 .ccard{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
-  border-radius:14px;padding:22px 22px 22px 28px;text-align:left;transition:.2s;position:relative;overflow:hidden;
+  border-radius:16px;padding:22px 28px;text-align:left;transition:.2s;position:relative;overflow:hidden;
   display:flex;align-items:center;gap:16px}
 .ccard::before{content:"";position:absolute;top:16px;left:0;bottom:16px;width:3px;background:var(--gold2)}
+.ccard::after{content:"";position:absolute;top:16px;right:0;bottom:16px;width:3px;background:var(--gold2)}
 .ccard:hover{border-color:rgba(230,192,121,.4);box-shadow:0 8px 24px rgba(0,0,0,.3)}
 .ccard .cicon{width:28px;height:28px;flex:none;color:var(--gold)}
 .ccard .ctxt h3{font-size:1.02rem;font-weight:800;margin-bottom:4px}
