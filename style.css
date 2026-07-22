@@ -121,7 +121,7 @@ header .wrap{max-width:1440px}
 .soc{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
   border:1px solid var(--line);background:rgba(17,26,43,.6);cursor:default;position:relative;transition:.2s;color:var(--gold)}
 .soc svg{width:22px;height:22px}
-.soc svg path,.soc svg circle,.soc svg rect{fill:var(--gold);transition:.2s}
+.soc svg path,.soc svg circle,.soc svg rect{fill:var(--gold)}
 .soc-note{margin-top:12px;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);font-weight:700}
 
 /* contact */
