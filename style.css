@@ -97,8 +97,8 @@ header .wrap{max-width:1440px}
 .team-line span{color:var(--gold)}
 
 /* built with godot */
-.godot{margin:var(--section-pad) auto 0;display:flex;justify-content:center;align-items:center;gap:18px;
-  border:1px solid var(--line);background:rgba(17,26,43,.5);border-radius:14px;padding:26px 38px;text-align:center;max-width:480px}
+.godot{margin:24px auto 0;display:flex;justify-content:center;align-items:center;gap:18px;
+  border:1px solid var(--line);background:rgba(17,26,43,.5);border-radius:14px;padding:26px 38px;text-align:center;max-width:540px}
 .godot .gicon{width:46px;height:46px;flex:none}
 .godot .gicon path{fill:var(--godot)}
 .godot .gtxt{text-align:center}
@@ -179,7 +179,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 14px;color:var(--dim);fon
 @media(max-width:640px){.foot-social{gap:20px}.foot-social .sbox svg{width:26px;height:26px}}
 
 /* subpages (about, contact) */
-main.page{padding-block:var(--section-pad) var(--section-pad);
+main.page{padding-block:clamp(28px,3vw,40px) var(--section-pad);
   background:radial-gradient(90% 46% at 50% 0%,var(--bg2) 0%,transparent 55%)}
 .page-head{text-align:center;max-width:72ch;margin:0 auto 8px}
 .page-head h2{line-height:1.2}
@@ -187,7 +187,7 @@ main.page{padding-block:var(--section-pad) var(--section-pad);
 .prose{max-width:84ch;margin:28px auto 0;color:var(--dim);font-size:1.04rem;text-align:justify;hyphens:auto}
 .prose p{margin-bottom:1.1rem}
 .prose strong{color:var(--ink);font-weight:700}
-.contact-cards{max-width:400px;margin:36px auto 0;display:flex;flex-direction:column;gap:14px}
+.contact-cards{max-width:430px;margin:36px auto 0;display:flex;flex-direction:column;gap:14px}
 .ccard{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
   border-radius:12px;padding:26px 28px;text-align:left;transition:.2s;position:relative;overflow:hidden;
   display:flex;align-items:center;gap:16px}
