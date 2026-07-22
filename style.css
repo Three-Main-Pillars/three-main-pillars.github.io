@@ -8,12 +8,10 @@
   --section-pad:clamp(32px, 4vw, 56px);
   --ff-display:'Cinzel',Georgia,'Times New Roman',serif;
 }
-@font-face{font-family:'Cinzel';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/cinzel-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Cinzel';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/cinzel-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:'Cinzel';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/cinzel-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Cinzel';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/cinzel-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:'Cinzel';font-style:normal;font-weight:900;font-display:swap;src:url(assets/fonts/cinzel-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Cinzel';font-style:normal;font-weight:900;font-display:swap;src:url(assets/fonts/cinzel-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* Cinzel ships as a variable font (wght axis 400-900). The range syntax exposes the whole axis
+   from one file per subset, so 700/800 render as real interpolated weights, not faux bold. */
+@font-face{font-family:'Cinzel';font-style:normal;font-weight:400 900;font-display:swap;src:url(assets/fonts/cinzel-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Cinzel';font-style:normal;font-weight:400 900;font-display:swap;src:url(assets/fonts/cinzel-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scrollbar-gutter:stable}
 body{
@@ -126,11 +124,6 @@ header .wrap{max-width:1440px}
 
 /* contact */
 .contact{text-align:center}
-.mails{margin-top:22px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.mailcard{border:1px solid var(--line);border-radius:12px;padding:14px 18px;min-width:220px;background:rgba(17,26,43,.5);transition:.2s}
-.mailcard:hover{border-color:rgba(230,192,121,.4)}
-.mailcard .k{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);font-weight:700}
-.mailcard a{display:block;margin-top:4px;color:var(--gold);font-weight:700}
 
 /* footer */
 footer{border-top:1px solid var(--line);padding:22px 0 14px;color:var(--dim);font-size:.85rem}
@@ -173,7 +166,14 @@ footer{border-top:1px solid var(--line);padding:22px 0 14px;color:var(--dim);fon
 .foot-social .sbox{display:grid;place-items:center;opacity:1;visibility:visible}
 .foot-social .sbox svg{width:22px;height:22px;display:block}
 .foot-social .sbox svg path{fill:#e6c079 !important}
-@media(max-width:640px){.foot-social{gap:20px}.foot-social .sbox svg{width:26px;height:26px}}
+/* mobile: 44x44 icons = WCAG touch target. .fbrand's 34ch cap is lifted so five of them fit one
+   row; the cap moves to .fbrand p so the brand line keeps its measure. */
+@media(max-width:640px){
+  .fcol.fbrand{max-width:none}
+  .fbrand p{max-width:34ch}
+  .foot-social{gap:clamp(6px,3vw,12px);flex-wrap:nowrap}
+  .foot-social .sbox{width:44px;height:44px}
+  .foot-social .sbox svg{width:44px;height:44px}}
 
 /* subpages (about, contact) */
 main.page{padding-block:clamp(28px,3vw,40px) var(--section-pad);
