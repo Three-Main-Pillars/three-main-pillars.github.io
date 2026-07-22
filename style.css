@@ -97,11 +97,11 @@ header .wrap{max-width:1440px}
 .team-line span{color:var(--gold)}
 
 /* built with godot */
-.godot{margin:var(--section-pad) auto 0;display:flex;justify-content:center;flex-direction:column;align-items:center;gap:10px;
-  border:1px solid var(--line);background:rgba(17,26,43,.5);border-radius:14px;padding:24px 32px;text-align:center;max-width:400px}
+.godot{margin:var(--section-pad) auto 0;display:flex;justify-content:center;align-items:center;gap:18px;
+  border:1px solid var(--line);background:rgba(17,26,43,.5);border-radius:14px;padding:26px 38px;text-align:left;max-width:480px}
 .godot .gicon{width:46px;height:46px;flex:none}
 .godot .gicon path{fill:var(--godot)}
-.godot .gtxt{text-align:center}
+.godot .gtxt{text-align:left}
 .godot .gtxt b{display:block;font-weight:800;font-size:1.22rem}
 .godot .gtxt small{color:var(--dim);font-size:.96rem}
 .godot .gtxt .godot-tm{margin-top:8px;opacity:.55;font-size:.74rem}
@@ -187,12 +187,12 @@ main.page{padding-block:var(--section-pad) var(--section-pad);
 .prose{max-width:84ch;margin:28px auto 0;color:var(--dim);font-size:1.04rem;text-align:justify;hyphens:auto}
 .prose p{margin-bottom:1.1rem}
 .prose strong{color:var(--ink);font-weight:700}
-.contact-cards{max-width:520px;margin:36px auto 0;display:flex;flex-direction:column;gap:12px}
+.contact-cards{max-width:460px;margin:36px auto 0;display:flex;flex-direction:column;gap:14px}
 .ccard{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
-  border-radius:8px;padding:16px 22px;text-align:left;transition:.2s;position:relative;overflow:hidden;
-  display:flex;align-items:center;gap:14px}
-.ccard::before{content:"";position:absolute;top:12px;left:0;bottom:12px;width:3px;background:var(--gold2)}
-.ccard::after{content:"";position:absolute;top:12px;right:0;bottom:12px;width:3px;background:var(--gold2)}
+  border-radius:12px;padding:22px 26px;text-align:left;transition:.2s;position:relative;overflow:hidden;
+  display:flex;align-items:center;gap:16px}
+.ccard::before{content:"";position:absolute;top:14px;left:0;bottom:14px;width:3px;background:var(--gold2)}
+.ccard::after{content:"";position:absolute;top:14px;right:0;bottom:14px;width:3px;background:var(--gold2)}
 .ccard:hover{border-color:rgba(230,192,121,.4);box-shadow:0 8px 24px rgba(0,0,0,.3)}
 .ccard .cicon{width:26px;height:26px;flex:none;color:var(--gold)}
 .ccard .ctxt h3{font-size:1rem;font-weight:800;margin-bottom:2px}
